@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>商城首页</title>
+	
+	<style type="text/css">
+		#father{
+			border: 1px solid red;
+			width: 1300px;
+			height: 2256px;
+			margin: auto;
+		}
+		/*#logo{
+			border: 1px solid black;
+			width: 1300px;
+			height: 50px;
+		}*/
+		.top{
+			border: 1px solid blue ;
+			width: 431px;
+			height: 50px;
+			float: left;
+		}
+		#top{
+			padding-top: 12px;
+			height: 38px;
+		}
+		#menu{
+			border: 1px solid red;
+			width: 1300px;
+			height: 50px;
+			background-color: #000000;
+		}
+		ul li{
+			display: inline;
+			color: white;
+		}
+		#clear{
+			clear: both;
+		}
+		#product{
+			border: 1px solid red;
+			width: 1300px;
+			height: 592px;
+		}
+		#product_top{
+			border: 1px solid blue;
+			width: 100%;
+			height: 50px;
+		}
+		#product_bottom{
+			border: 1px solid green;
+			width: 100%;
+			height: 538px;
+		}
+		#proudct_left{
+			border: 1px solid red;
+			width: 200px;
+			height: 93.5%;
+			float: left;
+		}
+		#product_right{
+			border: 1px solid blue;
+			height: 1094px;
+			height: 100%;
+		}
+		#big{
+			border: 1px solid red;
+			width: 544px;
+			height: 250px;
+			float: left;
+		}
+		.small{
+			border: 1px solid blue;
+			width:180px;
+			height: 250px;
+			float: left;
+			text-align: center;
+		}
+		#guanggao{
+			padding-top: 5px;
+		}
+		#bottom{
+			text-align: center;
+		}
+		a{
+			text-decoration: none;
+		}
+	</style>
+	<!--<script>
+		//书写函数
+		var i=0;
+		function init(){
+			//书写轮播图显示的时间
+			setInterval("changeImg()",3000);
+			//设置广告图片的定时操作
+			time=setInterval("showAd()",3000);
+		}
+		//书写函数
+		function changeImg(){
+			i++;
+			document.getElementById("img").src=""+i+".jpg";
+			if(i==3){
+				i=0;
+			}
+		}
+		
+		//书写显示广告图片的函数
+		function showAd(){
+			//3.获取广告图片的位置
+			var  adEle=document.getElementById("img2")
+			//4.修改广告图片元素里面的属性 让其显示
+			adEle.style.dispaly="block";
+			//5.清除显示图片的定时操作
+			clearInterval(time);
+			//6.设置隐藏图片的定时操作
+			time=setInterval("hiddenAd()",3000);
+		}
+		//7.书写隐藏图片的定时操作
+		function hiddenAd(){
+//			8.获取广告图片并设置style属性的display值
+			document.getElementById("img2").style.display="none";
+//			9.清除隐藏广告图片的定时操作
+		 	clearInterval(time);
+		}
+	</script>
+	-->
+	<script ></script>
+	</head>
+	<body onload="init() ">
+		<!--广告图片-->
+		<img src="middle01.jpg"  width="100%"  id="img2"/>
+		<div id="father">
+			<!--1.logo部分-->
+			<div  id="logo">
+				<div class="top">
+				<img src="logo2.png" height="46px" />	
+					
+				</div>
+				<div class="top">
+					<img src="header.png"  height="46px"/>
+				</div>
+				<div class="top" id="top">
+					<a href="#">登陆 </a>
+					<a href="#">注册</a>
+					<a href="#">购物车</a>
+				</div>
+			</div>	
+		<div id="clear">
+			<!--清除浮动专属框-->
+		</div>
+		<!--2.导航栏-->
+			<div  id="menu">
+				<ul>
+					<li style="font-size: 20px;">首页</li>&nbsp;&nbsp;&nbsp;
+					<a ><li>家用电器</li></a>&nbsp;&nbsp;&nbsp;
+					<li> 手机数码</li>&nbsp;&nbsp;&nbsp;
+					<li>鞋靴箱包</li>&nbsp;&nbsp;&nbsp;
+					<li>生活用品</li>&nbsp;&nbsp;&nbsp;
+					<li>奢侈品</li>
+				</ul>
+			</div>	
+			<!--3.轮播图-->
+			<div  id="">
+				<img src="1.jpg" width="100%" id="img"/>
+			</div>
+			<!--4.最新商品-->
+			<div  id="product">
+				<div id="product_top">
+					&nbsp;&nbsp;<span  style="font-size: 25px;">最新商品&nbsp;&nbsp;&nbsp;<img src="title2.jpg"/></span>
+				</div>
+				<div id="product_bottom">
+					<div id="proudct_left">
+						<img src="big01.jpg" width=100%;height=100%;/>
+					</div>
+					<div id="product_right">
+						<div id="big">
+							<a href="#"><img src="middle01.jpg" width="100%" height="100%"/></a>
+						</div>
+						<div class="small">
+							<img src="small03.jpg"  width="80%"  />
+							<a href="#"><p style="font-size: 15px; color: gary">电磁锅</p></a>
+							<p font-size:20px> ￥3999</p>	
+						</div>
+						<div class="small">
+							<img src="small03.jpg"  width="80%"  />
+							<a href="#"><p style="font-size: 15px; color: gary">电磁锅</p></a>
+							<p font-size:20px> ￥3999</p>
+						</div>
+						<div class="small">
+							<img src="small03.jpg"  width="80%"  />
+							<a href="#"><p style="font-size: 15px; color: gary">电磁锅</p></a>
+							<p font-size:20px> ￥3999</p>
+							
+						</div>
+						<div class="small">
+							<img src="small03.jpg"  width="80%"  />
+							<a href="#"><p style="font-size: 15px; color: gary">电磁锅</p></a>
+							<p font-size:20px> ￥3999</p>
+							
+						</div>
+						<div class="small">
+							<img src="small03.jpg"  width="80%"  />
+							<a href="#"><p style="font-size: 15px; color: gary">电磁锅</p></a>
+							<p font-size:20px> ￥3999</p>
+							
+						</div>
+						<div class="small">
+							<img src="small03.jpg"  width="80%"  />
+							<a href="#"><p style="font-size: 15px; color: gary">电磁锅</p></a>
+							<p font-size:20px> ￥3999</p>
+							
+						</div>
+						<div class="small">
+							<img src="small03.jpg"  width="80%"  />
+							<a href="#"><p style="font-size: 15px; color: gary">电磁锅</p></a>
+							<p font-size:20px> ￥3999</p>
+							
+						</div>
+						<div class="small">
+							<img src="small03.jpg"  width="80%"  />
+							<a href="#"><p style="font-size: 15px; color: gary">电磁锅</p></a>
+							<p font-size:20px> ￥3999</p>
+							
+						</div>
+						<div class="small">
+							<img src="small03.jpg"  width="80%"  />
+							<a href="#"><p style="font-size: 15px; color: gary">电磁锅</p></a>
+							<p font-size:20px> ￥3999</p>
+							
+						</div>
+					</div>
+				</div>
+			</div>	
+			<!--5.广告图片-->
+			<div  id="">
+				<img src="ad.jpg" width="100%" height="100%"/>
+			</div>
+			<!--6.热门商品-->
+			<div  id="product">
+				<div id="product_top">
+					&nbsp;&nbsp;<span  style="font-size: 25px;">热门商品&nbsp;&nbsp;&nbsp;<img src="title2.jpg"/></span>
+				</div>
+				<div id="product_bottom">
+					<div id="proudct_left">
+						<img src="big01.jpg" width=100%;height=100%;/>
+					</div>
+					<div id="product_right">
+						<div id="big">
+							<a href="#"><img src="middle01.jpg" width="100%" height="100%"/></a>
+						</div>
+						<div class="small">
+							<img src="small03.jpg"  width="80%"  />
+							<a href="#"><p style="font-size: 15px; color: gary">电磁锅</p></a>
+							<p font-size:20px> ￥3999</p>	
+						</div>
+						<div class="small">
+							<img src="small03.jpg"  width="80%"  />
+							<a href="#"><p style="font-size: 15px; color: gary">电磁锅</p></a>
+							<p font-size:20px> ￥3999</p>
+						</div>
+						<div class="small">
+							<img src="small03.jpg"  width="80%"  />
+							<a href="#"><p style="font-size: 15px; color: gary">电磁锅</p></a>
+							<p font-size:20px> ￥3999</p>
+							
+						</div>
+						<div class="small">
+							<img src="small03.jpg"  width="80%"  />
+							<a href="#"><p style="font-size: 15px; color: gary">电磁锅</p></a>
+							<p font-size:20px> ￥3999</p>
+							
+						</div>
+						<div class="small">
+							<img src="small03.jpg"  width="80%"  />
+							<a href="#"><p style="font-size: 15px; color: gary">电磁锅</p></a>
+							<p font-size:20px> ￥3999</p>
+							
+						</div>
+						<div class="small">
+							<img src="small03.jpg"  width="80%"  />
+							<a href="#"><p style="font-size: 15px; color: gary">电磁锅</p></a>
+							<p font-size:20px> ￥3999</p>
+							
+						</div>
+						<div class="small">
+							<img src="small03.jpg"  width="80%"  />
+							<a href="#"><p style="font-size: 15px; color: gary">电磁锅</p></a>
+							<p font-size:20px> ￥3999</p>
+							
+						</div>
+						<div class="small">
+							<img src="small03.jpg"  width="80%"  />
+							<a href="#"><p style="font-size: 15px; color: gary">电磁锅</p></a>
+							<p font-size:20px> ￥3999</p>
+							
+						</div>
+						<div class="small">
+							<img src="small03.jpg"  width="80%"  />
+							<a href="#"><p style="font-size: 15px; color: gary">电磁锅</p></a>
+							<p font-size:20px> ￥3999</p>
+							
+						</div>
+					</div>
+				</div>
+			</div>	
+			<!--7.广告图片-->
+			<div  id="guanggao">
+				<img src="footer.jpg"  width="100%"/>
+			</div>
+			<!--8.版权信息-->
+			<div  id="bottom">
+				<a href="#">关于我们</a>
+				<a href="#">联系我们</a>
+				<a href="#">招贤纳士</a>
+				<a href="#">法律声明</a>
+				<a href="#">友情链接</a>
+				<a href="#">付费方式</a>
+				<a href="#">服务声明</a>
+				<a href="#">广告声明</a>
+				<p>
+					Copyright @2005-2016 何温柔要变优秀！
+				</p>
+			</div>	
+		</div>
+		
+	</body>
+</html>

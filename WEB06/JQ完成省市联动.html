@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>JQ完成省市联动</title>
+		<script src="jquery-1.8.3.js"></script>
+		<script>
+			$(function(){
+				
+				//2.创建二维数组 存储省市信息
+				var  city= new Array(3);
+				city[0]=new Array("西安市","莲湖区","碑林区");
+				city[1]=new Array("成都","绵阳","都江堰");
+				city[2]=new Array("乌鲁木齐","南疆","北疆");
+				
+				
+				$("#cap").change(function (){
+					$("#city").empty();
+//					1.获取用户选择的省份
+					var  val=this.value;
+					//alert(val);
+				 $.each(city,function(i,n){
+				 	if(val==i)
+				 		{
+				 			$.each(city[i],function(j,m){
+				 				var textnode=document.createTextNode(m);
+				 				var ele=document.createElement("option");
+				 			$(ele).append(textnode);
+				 			$(ele).appendTo($("#city"));
+				 			});
+				 		}
+				 });
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<div style="text-align: center;">
+			籍贯：<select id="cap">
+				<option  >--请选择--</option>
+				<option  value="0" name="cap">陕西省</option>
+				<option value="1" name="cap">四川省</option>
+				<option value="2" name="cap">新疆省</option>
+			</select>
+			<select id="city">
+				
+			</select>
+		</div>
+	</body>
+</html>

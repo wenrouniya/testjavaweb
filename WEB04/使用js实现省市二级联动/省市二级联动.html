@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>省市二级联动</title>
+		<script>
+			function intocity(val){
+				//1.创建一个二维数组
+				var cap=new Array(3);
+				cap[0]=new Array("西安","灞桥","临潼");
+				cap[1]=new Array("成都","绵阳","攀枝花");
+				cap[2]=new Array("乌鲁木齐","南疆","北疆");
+//				8.获取第二个下啦列表
+				 var caties=document.getElementById("city");
+//				 10.清空第二个下拉列表option的内容
+				caties.options.length=0;
+//				2.遍历二维数组中的省份
+				for(var i=0;i<cap.length;i++)
+				{
+//					3.注意比较的是角标
+					if(i==val)
+					{
+						//4.遍历用户选择省份下的城市
+						 for(var j=0;j<cap[i].length;j++)
+						 {
+//						 	5创建城市文本节点
+						 	var cityValue=document.createTextNode(cap[i][j]);
+//						 	6.创建option元素节点
+						 	var opt=document.createElement("option");
+//						 	7.将城市文本节点添加到option中
+						 	opt.appendChild(cityValue);
+//						 	9.将option节点元素添加到第二个下拉列表中去
+						 	caties.appendChild(opt);
+						 }
+					}
+				}
+			}
+			
+		</script>
+	</head>
+	<body>
+		<table>
+			<tr>
+				<td>
+					籍贯：
+				</td>
+				<td>
+					<select id="cap" onchange="intocity(this.value)">
+						<option>--请选择--</option>
+						<option value="0">陕西</option>
+						<option value="1">四川</option>
+						<option value="2">新疆</option>
+					</select>
+					<select id="city">
+						
+					</select>
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>

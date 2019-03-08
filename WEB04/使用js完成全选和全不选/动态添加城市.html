@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>动态添加城市</title>
+		<script>
+			window.onload=function(){
+				document.getElementById("btn").onclick=function(){
+//					/1.获取url元素
+				var uValue=document.getElementById("url");
+//					2.创建城市文本节点
+				var textNode=document.createTextNode("西安");
+				//3.创建li元素节点
+				var liEle=document.createElement("li");
+				//4.将文本节点添加到元素节点中去
+				liEle.appendChild(textNode);
+				//5.将元素节点添加到ul中去
+				uValue.appendChild(liEle);
+					
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<input type="button" id="btn"  value="添加城市"/>
+		<ul id="url">
+			<li>北京</li>
+			<li>上海</li>
+			<li>广州</li>
+		</ul>
+	</body>
+</html>

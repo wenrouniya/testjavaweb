@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>实现表格高亮</title>
+		<script>
+			function  change(id,flag){
+				//alert("aa");
+				if(flag=='over')
+				{
+					document.getElementById(id).style.backgroundColor="red";
+				}
+				else if (flag=='out')
+				{
+					document.getElementById(id).style.backgroundColor="white";
+				}	
+			}
+
+		</script>
+	</head>
+	<body>
+		<table border="1px" align="center" width="225px" height="250px" id="info">
+				<thead>
+				<tr>
+					<td>学号</td>
+					<td>姓名</td>
+					<td>年龄</td>
+				</tr></thead>
+				<tbody>
+				<tr onmouseover="change('tr1','over')" onmouseout="change('tr1','out')" id="tr1">
+					<td>1</td>
+					<td>张三</td>
+					<td>19</td>
+				</tr onmouseover="change('tr2','over')" onmouseout="change('tr2','out')" id="tr2">
+				<tr>
+					<td>2</td>
+					<td>李四</td>
+					<td>18</td>
+				</tr>
+				<tr>
+					<td>3</td>
+					<td>王五</td>
+					<td>19</td>
+				</tr>
+				<tr>
+					<td>4</td>
+					<td>小明</td>
+					<td>19</td>
+				</tr>
+				<tr>
+					<td>5</td>
+					<td>笑笑</td>
+					<td>18</td>
+				</tr>
+				<tr>
+					<td>6</td>
+					<td>小华</td>
+					<td>19</td>
+				</tr>
+				</tbody>
+			</table>
+	</body>
+</html>

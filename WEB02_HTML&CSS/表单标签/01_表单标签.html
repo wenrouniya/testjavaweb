@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>表单标签</title>
+	</head>
+	<body>
+		<form action ="#" method="get">
+			隐藏字段:<input type="hidden" name="id" /><br />
+			用户名：<input type="text"  name="username"/><br />
+			密码：<input type="password"  name="password"  required="required" /><br />
+			确认密码：<input type="password"  name="repassword"/><br />
+			性别：<input type="radio" name="sex"  value="男"/>男
+			<input type="radio" name="sex"  value="女"></input>女 <br />
+			爱好 :<input type="checkbox"  name="hobby" value="篮球"/>篮球
+			<input type="checkbox"  name="hobby" value="足球"/> 足球 <input type="checkbox" name="hobby" value="乒乓球">乒乓球<br />
+			头像：<input type="file"  name="file"/><br />
+			籍贯：<select name="province">
+				<option >--请选择--</option>
+				<option selected="selected" value="北京">北京</option>
+				<option selected="selected" value="上海">上海</option>
+				<option selected="selected" value="广州">广州</option>
+			</select><br />
+			自我介绍：
+			<textarea name"introduce">
+				
+				
+			</textarea>
+			<br />
+			
+			提交按钮：<input type="submit" value="提交"/><br />
+			重置按钮：<input type="reset" />
+		</form>
+	</body>
+</html>

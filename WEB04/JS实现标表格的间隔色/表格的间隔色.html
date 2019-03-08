@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>表格间隔变色</title>
+		<script>
+			window.onload=function(){
+				 var t=document.getElementById("info");
+				 //获取表格中tbody的长度
+				var len= t.tBodies[0].rows.length;
+				for(var i=0;i<len;i++)
+				{
+					if(i%2==0)
+					{
+					t.tBodies[0].rows[i].style.backgroundColor="pink";
+					}
+					else
+					t.tBodies[0].rows[i].style.backgroundColor="yellow";
+				}
+			}
+		</script>
+	</head>
+	<body>
+			<table border="1px" align="center" width="225px" height="250px" id="info">
+				<thead>
+				<tr>
+					<td>学号</td>
+					<td>姓名</td>
+					<td>年龄</td>
+				</tr></thead>
+				<tbody>
+				<tr>
+					<td>1</td>
+					<td>张三</td>
+					<td>19</td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td>李四</td>
+					<td>18</td>
+				</tr>
+				<tr>
+					<td>3</td>
+					<td>王五</td>
+					<td>19</td>
+				</tr>
+				<tr>
+					<td>4</td>
+					<td>小明</td>
+					<td>19</td>
+				</tr>
+				<tr>
+					<td>5</td>
+					<td>笑笑</td>
+					<td>18</td>
+				</tr>
+				<tr>
+					<td>6</td>
+					<td>小华</td>
+					<td>19</td>
+				</tr>
+				</tbody>
+			</table>
+
+	</body>
+</html>

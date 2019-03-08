@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>全部选中和全不选中</title>
+		<script>
+			function checkAll(){
+				var checkAllEle=document.getElementById("checkall");
+				if(checkAllEle.checked==true )
+				{
+					var checkones=document.getElementsByName("checkone");
+					for(var i=0;i<checkones.length;i++)
+					{
+						checkones[i].checked=true;
+					}
+				}
+				else{
+					if(checkAllEle.checked==false)
+					{
+						var checkones=document.getElementsByName("checkone");
+						for(var i=0;i<checkones.length;i++){
+							checkones[i].checked=false;
+						}
+					}
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<table border="1px" align="center" width="225px" height="250px" id="info">
+				<thead>
+					<tr >
+						<td  clospan="4">
+							<input type="button"  value="添加"/>
+							<input type="button"  value="删除"/>
+						</td>
+					</tr>	
+				
+				<tr>
+					<td> <input type="checkbox"  onclick="checkAll()" id="checkall"/></td>
+					<td>学号</td>
+					<td>姓名</td>
+					<td>年龄</td>
+				</tr>
+			</thead>
+				<tbody>
+				<tr >
+					<td> <input type="checkbox"  name="checkone"/></td>
+					<td>1</td>
+					<td>张三</td>
+					<td>19</td>
+				</tr >
+				<tr>
+					<td> <input type="checkbox" name="checkone"  /></td>
+					<td>2</td>
+					<td>李四</td>
+					<td>18</td>
+				</tr>
+				<tr>
+					<td> <input type="checkbox"  name="checkone"/></td>
+					<td>3</td>
+					<td>王五</td>
+					<td>19</td>
+				</tr>
+				<tr>
+					<td> <input type="checkbox"  name="checkone"/></td>
+					<td>4</td>
+					<td>小明</td>
+					<td>19</td>
+				</tr>
+				<tr>
+					<td> <input type="checkbox"  name="checkone"/></td>
+					<td>5</td>
+					<td>笑笑</td>
+					<td>18</td>
+				</tr>
+				<tr>
+					<td> <input type="checkbox"  name="checkone"/></td>
+					<td>6</td>
+					<td>小华</td>
+					<td>19</td>
+				</tr>
+				</tbody>
+			</table>
+	</body>
+</html>
